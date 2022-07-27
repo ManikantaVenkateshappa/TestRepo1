@@ -1,0 +1,338 @@
+
+#
+# Copyright Koninklijke Philips N.V. 2014
+#
+# This file lists the binaries that can be part of our product(s).
+#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#            This file should not be modified without being reviewed by S&V architect
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+### File format
+#
+# Each line has the following comma-separated fields:
+#
+# * SoupId:     Name of component or SOUP item that this binary is part of
+# * Filename:   Filename of binary
+# * Remarks:    Any remarks, free format (but commas are not allowed)
+#
+### Editing guidance
+#
+# * Preserve ordering:
+#
+#   - Preserve sorted order:
+#
+#     - List packages in sorted order
+#
+#     - List binaries within a package in sorted order
+#
+#   - Do you really intend to upgrade the version?
+#
+#     - Yes: You should then also update the version of the associated SOUP item. This implies that:
+#            a. Updating PackageVersions.props and SOUPLicenses.csv
+#            b. Updating Licenses.csv (if upgraded version points to new license url).
+#            Changes may impact other codebases so plan build, test and delivery of changes
+#            accordingly.
+#
+#     - No:  It could be that this different version appears because it is an indirect dependency
+#            of a newly added package. If so, you can either try to find a compatible version for
+#            the newly added package. Alternatively, you can try adding an explicit package
+#            reference for the indirect dependency that is of the preferred version. The latter
+#            requires that this version is runtime compatible with the original version.
+#
+### See also
+#
+# * https://healthsuite.atlassian.net/wiki/spaces/CLIN/pages/1462961310/Approved+Binaries
+#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#            This file should not be modified without being reviewed by S&V architect
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+
+#
+# Column headers
+#
+SoupId,Filename,Remarks
+
+#
+# Approved SOUP items
+#
+AngleSharp 0.16.1,AngleSharp.dll,net46
+AWSSDK.SimpleNotificationService 3.3.101.57,AWSSDK.SimpleNotificationService.dll,
+AsyncIO 0.1.69,AsyncIO.dll,
+ASP.NET Core 3.1.0,Microsoft.Extensions.Configuration.Abstractions.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.Configuration.Binder.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.Configuration.EnvironmentVariables.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.Configuration.FileExtensions.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.Configuration.Json.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.Configuration.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.DependencyInjection.Abstractions.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.DependencyInjection.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.DependencyModel.dll,netstandard1.6  TODO - why is it needed?
+ASP.NET Core 3.1.0,Microsoft.Extensions.FileProviders.Abstractions.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.FileProviders.Physical.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.FileSystemGlobbing.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.Logging.Abstractions.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.Logging.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.Options.dll,netcoreapp3.1
+ASP.NET Core 3.1.0,Microsoft.Extensions.Primitives.dll,netstandard2.0
+ASP.NET Core 3.1.0,Microsoft.Extensions.Caching.StackExchangeRedis.dll,netstandard2.0
+ASP.NET MVC 5,System.Web.Http.SelfHost.dll,
+AWSSDK.Core 3.3.103.70,AWSSDK.Core.dll,netstandard2.0 v3.3.103.70
+AWSSDK.S3 3.3.108.4,AWSSDK.S3.dll,netstandard2.0 v3.3.108.4
+DotNet Core-Setup 2.1.0,Microsoft.DotNet.PlatformAbstractions.dll,netstandard1.3 v1.0.1-TODO clean one variant
+DotNet Core-Setup 2.1.0,Microsoft.Extensions.DependencyModel.dll,netcoreapp2.0
+FluentValidation.AspNetCore 8.5.1,FluentValidation.AspNetCore.dll,netcoreapp3.0
+FluentValidation.AspNetCore 8.5.1,FluentValidation.dll,netstandard2.0
+FluentValidation.AspNetCore 8.5.1,FluentValidation.DependencyInjectionExtensions.dll,netstandard2.0
+HFA Geo Blend 3D r13309,DataRepresentation.dll,x64
+HFA Geo Blend 3D r13309,GeoBlend3D.dll,x64
+HFA Geo Blend 3D r13309,HfaGeoBlend3D.dll,x64
+HL7 FHIR Specification R4 3.8.2,Hl7.Fhir.R4.Core.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,Hl7.Fhir.ElementModel.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,Hl7.Fhir.STU3.Core.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,Hl7.Fhir.Serialization.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,Hl7.Fhir.Support.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,Hl7.Fhir.Support.Poco.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,Hl7.FhirPath.dll,netstandard2.0
+HL7 FHIR Specification STU3 3.8.2,System.ComponentModel.Annotations.dll,netstandard2.1
+HTML Agility pack 1.11.33,HtmlAgilityPack.dll,net45
+HtmlSanitizer 7.1.488,HtmlSanitizer.dll,net46
+IdentityModel.AspNetCore.OAuth2Introspection 4.0.0,IdentityModel.dll,net461
+IdentityModel.AspNetCore.OAuth2Introspection 4.0.0,IdentityModel.AspNetCore.OAuth2Introspection.dll,netcoreapp3.1
+Intel C++ Compiler Runtime for Windows 18.0,libiomp5md.dll,x64
+Intel C++ Compiler Runtime for Windows 18.0,libmmd.dll,x64
+Intel C++ Compiler Runtime for Windows 18.0,libmmdd.dll,x64
+Intel C++ Compiler Runtime for Windows 18.0,svml_dispmd.dll,x64
+ImageCompression 0.8.0,Philips_Platform_CodecIpp.dll,x64
+ImageCompression 0.8.0,Philips_Platform_CodecIpp.lib,x64
+ImageCompression 0.7.0,Philips_Platform_CodecIpp.dll,x64
+Intel IPP9 Legacy 9.1.3,3rdParty.Intel.IPP.9.dll,x64
+Intel IPP9 Legacy 9.1.3,ippj90lgc.dll,x64
+IPP 9.0 legacy,ippi90lgc.dll,x64
+IPP 9.0 legacy,ippm90lgc.dll,x64
+IPP 2018.5.274,Philips_Platform_Uade_Ipp.dll,x64
+Jose JWT 2.3.0,jose-jwt.dll,netcoreapp2.0
+Json.NET BSON 1.0.1,Newtonsoft.Json.Bson.dll,
+libzmq-vc140 4.2.3,libzmq.dll,x64
+log4Net 2.0.14,log4net.dll,
+MeshMOI r13309,MeshMOI.dll,x64
+MessagePack 1.9.11,MessagePack.dll,netstandard2.0
+Microsoft.AspNet.Mvc 5.2.7,Microsoft.Web.Infrastructure.dll,
+Microsoft.AspNet.Mvc 5.2.7,System.Web.Helpers.dll,
+Microsoft.AspNet.Mvc 5.2.7,System.Web.Mvc.dll,
+Microsoft.AspNet.Mvc 5.2.7,System.Web.Razor.dll,
+Microsoft.AspNet.Mvc 5.2.7,System.Web.WebPages.Deployment.dll,
+Microsoft.AspNet.Mvc 5.2.7,System.Web.WebPages.dll,
+Microsoft.AspNet.Mvc 5.2.7,System.Web.WebPages.Razor.dll,
+Microsoft.AspNet.SignalR.Client 2.4.2,Microsoft.AspNet.SignalR.Client.dll,net45
+Microsoft.AspNet.SignalR.Core 2.4.2,Microsoft.AspNet.SignalR.Core.dll,net45
+Microsoft.AspNet.WebApi.WebHost 5.2.7,System.Web.Http.WebHost.dll,net45
+Microsoft.AspNet.Web.Optimization 1.1.3,System.Web.Optimization.dll,
+Microsoft.AspNetCore.Connections.Abstractions 3.1.20,Microsoft.AspNetCore.Connections.Abstractions.dll,netcoreapp3.1
+Microsoft.AspNetCore.Http.Features 3.1.20,Microsoft.AspNetCore.Http.Features.dll,netcoreapp3.1
+Microsoft.AspNetCore.SignalR.Common 3.1.20,Microsoft.AspNetCore.SignalR.Common.dll,netcoreapp3.1
+Microsoft.AspNetCore.SignalR.Client 3.1.20,Microsoft.AspNetCore.SignalR.Client.dll,netstandard2.0
+Microsoft.AspNetCore.SignalR.Client.Core 3.1.20,Microsoft.AspNetCore.SignalR.Client.Core.dll,netstandard2.0
+Microsoft.AspNetCore.SignalR.Protocols.MessagePack 3.1.20,Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll,netstandard2.0
+Microsoft.AspNetCore.SignalR.Protocols.MessagePack 3.1.20,Microsoft.Extensions.Options.dll,netstandard2.0
+Microsoft.AspNetCore.SignalR.Protocols.MessagePack 3.1.20,Microsoft.Extensions.Primitives.dll,netstandard2.0
+Microsoft.AspNetCore.SignalR.Protocols.MessagePack 3.1.20,Microsoft.Extensions.DependencyInjection.Abstractions.dll,netstandard2.0
+Microsoft.Extensions.Logging.Abstractions 3.1.20,Microsoft.Extensions.Logging.Abstractions.dll,netstandard2.0
+Microsoft Owin 2.1.0,Microsoft.Owin.Cors.dll,net45
+Microsoft Owin 2.1.0,Microsoft.Owin.Host.HttpListener.dll,net45
+Microsoft Owin 2.1.0,Microsoft.Owin.Hosting.dll,net45
+Microsoft Owin 2.1.0,Microsoft.Owin.dll,net45
+Microsoft Owin 2.1.0,Microsoft.Owin.Security.dll,net45
+Microsoft Owin 2.1.0,Microsoft.Owin.StaticFiles.dll,net45
+Microsoft Owin 2.1.0,Microsoft.Owin.FileSystems.dll,net45
+Microsoft WebView2 1.0.1108.44,Microsoft.Web.WebView2.Core.dll,
+Microsoft WebView2 1.0.1108.44,Microsoft.Web.WebView2.Wpf.dll,
+Microsoft WebView2 1.0.1108.44,WebView2Loader.dll,x64
+Newtonsoft JSON 11.0.2,Newtonsoft.Json.dll,netcoreapp2.0
+NJsonSchema 9.13.17,NJsonSchema.dll,netcoreapp2.0
+NetMQ 4.0.1.6,NetMQ.dll,
+NReco.PdfGenerator.LT 1.1.15,NReco.PdfGenerator.LT.dll,
+NReco.PhantomJS 1.0.4,NReco.PhantomJS.dll,net40
+OpenTelemetry 1.1.0,OpenTelemetry.dll,netstandard2.0
+OpenTelemetry 1.1.0,OpenTelemetry.Api.dll,netstandard2.0
+OpenTelemetry 1.1.0,OpenTelemetry.Exporter.Zipkin.dll,netstandard2.0
+OpenTelemetry 1.1.0,OpenTelemetry.Extensions.Hosting.dll,netstandard2.0
+OpenTelemetry 1.1.0,OpenTelemetry.Instrumentation.AspNetCore.dll,netcoreapp3.1
+OpenTelemetry 1.1.0,OpenTelemetry.Instrumentation.Http.dll,netstandard2.0
+Microsoft.OpenApi 1.2.3,Microsoft.OpenApi.dll,netcoreapp3.1
+Microsoft.Win32.Registry 5.0.0,Microsoft.Win32.Registry.dll
+NaCl.Net 0.1.13,NaCl.dll,
+OWIN 1.0.0,Owin.dll,
+PhantomJS 2.1.1,phantomjs.exe,
+Philips.NxGen.UW.AppHost.ApplicationValidator.Interfaces 2.0.0,Philips.NxGen.UW.AppHost.ApplicationValidator.Interfaces.dll,
+Philips.ServicePlatform.ICE-ISTSL,ISTSL.dll,Used in Logging subsystem for encryption and decryption 
+Philips.ServicePlatform.ICE-ISTSL,ISTSLWrapper.dll,net472 Used in Logging subsystem for encryption and decryption
+Philips.ServiceTools.Cat.Toolkit.10.0.0,ServiceTools.Cat.Toolkit.dll,PSC toolkit for fetching csv log messages
+Philips.ServiceTools.LogExport.Toolkit.10.0.0,Philips.ServiceTools.LogExport.Toolkit.dll,PSC toolkit for exporting logs in CDF format
+Philips.ServiceTools.UserAuthentication.Toolkit.10.0.0,Philips.ServiceTools.UserAuthentication.Toolkit.dll,PSC toolkit for CSIP
+Philips.ServiceTools.DICOMConfig.Toolkit 8.2.0,Philips.ServiceTools.DICOMConfig.Toolkit.dll, Nuget package version 8.2 Used for dicom config
+Philips.Harmony.SystemFramework.LegacyDependency 1.0.1,LabelBuilder.Interfaces.dll,
+Philips.Harmony.SystemFramework.LegacyDependency 1.0.1,SemanticModel.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,ApplicationManagement.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,ApplicationServices.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,AsyncClientLib.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,Backbone.Simulator.Interfaces.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,Base.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,BIGMessages.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,CDBCommon.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,CDBFreeSpaceManager.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,CDBManager.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,CommonInterfaces.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,Connectivity.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,ConnectivityFilters.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,ContextManagement.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,DataProcessor.dll,
+DevExpress 3.2.5.0,DevExpress.Data3.dll,
+DevExpress 3.2.5.0,DevExpress.Utils3.dll,
+DevExpress 3.2.5.0,DevExpress.XtraEditors3.dll,
+DevExpress 3.2.5.0,DevExpress.XtraGrid3.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,Dicom.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,DicomFactory.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,DicomFilters.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,DispatcherInterfaces.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,EntityFramework.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,EntityFrameworkPlatform.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,FontResources.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,FreeSpaceModule.dll,
+IronRuby 1.1.2,IronRuby.dll,
+IronRuby 1.1.2,IronRuby.Libraries.dll,
+IronRuby 1.1.2,IronRuby.Libraries.Yaml.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,JpegCodec.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,LabelBuilder.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,LegacyCompressor.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,LICCHECKLib.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,LicenseBase.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,LocalDatabase.dll,
+Lucene.Net 2.9.2.2,Lucene.Net.dll,
+microsoft.diagnostics.tracing.eventsource.redist 1.1.28,Microsoft.Diagnostics.Tracing.EventSource.dll,
+IronRuby 1.1.2,Microsoft.Dynamic.dll,
+Microsoft.Expression.Interactions 1.0.1,Microsoft.Expression.Interactions.dll,
+commonservicelocator 1.0.0,Microsoft.Practices.ServiceLocation.dll,
+Unity 2.1.505,Microsoft.Practices.Unity.Configuration.dll,
+Unity 2.1.505,Microsoft.Practices.Unity.dll,
+IronRuby 1.1.2,Microsoft.Scripting.dll,
+IronRuby 1.1.2,Microsoft.Scripting.Metadata.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,PmsControls.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,Portal.Platform.Interfaces.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,Portal.UnityContainer.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,PortalCommon.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,PortalCompressionTools.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,PortalPerfCounters.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,RefLockManager.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,SemanticModelSerializer.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,SMCommon.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,SMManager.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,StorageDevices.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,StorageManagement.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,SystemConfigurations.dll,
+Tesseract 3.0.2.0,Tesseract.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,TimeoutManager.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,TransferLogic.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,TransferSpooler.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,WCFServicesInfrastructure.dll,
+Philips.GrapheneApplications.ApplicationServices.LegacyDependency 1.0.0,ZIPLib.dll,
+PicturePlusAlgorithm 1.4,IPicturePlusAlgorithm.dll,
+PicturePlusAlgorithm 1.4,PicturePlusAlgorithm.dll,
+PipelinesSocketsUnofficial 2.0.22,Pipelines.Sockets.Unofficial.dll,netcoreapp3.0
+Protobuf 2.4.4,protobuf-net.dll,
+Portable BouncyCastle 1.8.5,BouncyCastle.Crypto.dll,net4
+Prometheus-net 3.4.0,Prometheus.NetStandard.dll,
+Prometheus-net 3.4.0,Prometheus.NetCore.dll,
+RabbitMQ 5.1.0,RabbitMQ.Client.dll,netstandard1.5
+Scrutor 3.0.1,Scrutor.dll,netstandard2.0
+SharpZipLib 1.3.3,ICSharpCode.SharpZipLib.dll,net45
+Signed.SignalRSwaggerGen 1.1.0,SignalRSwaggerGen.dll,netcoreapp3.0
+Simplicit 1.1.1,DataRepresentation_Simplicit_r18087.dll,x64
+Simplicit 1.1.1,Simplicit_r18087.dll,x64
+Simplicit 1.1.1,MeshMOI_Simplicit_r18087.dll,x64
+StackExchange.Redis 2.0.601,StackExchange.Redis.dll,netcoreapp2.0
+SQLite 1.0.113.6,System.Data.SQLite.dll,AnyCPU net46
+SQLite 1.0.113.6,SQLite.Interop.dll,x64 net46
+Swashbuckle.AspNetCore 6.1.4,Swashbuckle.AspNetCore.Swagger.dll,netcoreapp3.0
+Swashbuckle.AspNetCore 6.1.4,Swashbuckle.AspNetCore.SwaggerGen.dll,netcoreapp3.0
+Swashbuckle.AspNetCore 6.1.4,Swashbuckle.AspNetCore.SwaggerUI.dll,netcoreapp3.0
+Swashbuckle.AspNetCore.Annotations 5.0.0,Swashbuckle.AspNetCore.Annotations.dll,netcoreapp3.0
+Swashbuckle.AspNetCore.Filters 6.0.0,Swashbuckle.AspNetCore.Filters.dll,netcoreapp3.0
+System.IO.Abstractions 6.0.15,System.IO.Abstractions.dll,netcoreapp2
+System.ServiceModel.Primitives 4.4.0,System.ServiceModel.Primitives.dll,not really packaged required only to have license ref correct
+System.Private.ServiceModel 4.4.0,System.Private.ServiceModel.dll,not really packaged required only to have license ref correct
+System.Security.AccessControl 5.0.0,System.Security.AccessControl.dll
+System.Security.Principal.Windows 5.0.0,System.Security.Principal.Windows.dll
+System.Windows.Extensions 5.0.0,System.Windows.Extensions.dll
+TeeChart.WPF 4.1.2016.5124,TeeChart.WPF.dll,
+uade.aixia 1.0.2,AixiaWrapper.dll,
+uade.aixia 1.0.2,libaixia.dll,x64
+uade.aixia 1.0.2,libAixiaWrapper_c.dll,x64
+uade.aixia 1.0.2,MathLib.dll,
+uade.aixia 1.0.2,P-Rex.dll,
+uade.aixia 1.0.2,P-Rex-RenderEngineOGL.dll,
+uade.truevue.wrapper 1.0.0,Philips_Platform_Rendering_TrueVueWrapper_c.dll,netstandard2.0
+uade.vr2.wrapper 1.0.3,Philips_Platform_Rendering_Vr2Wrapper_c.dll,netstandard2.0
+uade.rendering.native 1.0.3,Philips.Platform.Rendering.MultiPipe.dll,x86
+uade.rendering.native 1.0.3,Philips.Platform.Rendering.Native.dll,x86
+uade.SpectralCTSDK 1.0.0,SpectralSDK.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,SpectralKernel.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,SDKIppWrapper.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,SDKLogWrapper.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,AlgorithmAdapters.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,SampleAlg.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,ImageProcessing.dll,netstandard2.0
+uade.SpectralCTSDK 1.0.0,IntelIppWrapper.dll,netstandard2.0
+Unity.Abstractions 3.3.1,Unity.Abstractions.dll,x64
+Unity.Configuration 5.2.5,Unity.Configuration.dll,x64
+Unity.Container 5.8.11,Unity.Container.dll,x64
+Unity.Interception 5.5.5,Unity.Interception.dll,x64
+Web API 5.0.11001.0,System.Web.Cors.dll,
+Web API 5.2.30128.0,System.Net.Http.Formatting.dll,TODO: this is .NetFx v5.2.3 binary but it should be v5.2.7 to ensure single binary version
+Web API 5.2.61128.0,System.Net.Http.Formatting.dll,netstandard2.0
+Web API 5.2.30128.0,System.Web.Http.dll,
+Web API 5.2.30128.0,System.Web.Http.Owin.dll,
+WebGrease 1.6.0,WebGrease.dll,
+WkHtmlToPdf 0.12.4,wkhtmltopdf.exe,x64
+WkHtmlToPdf 0.12.4,wkhtmltox.dll,x64
+
+# .NET Standard Facade assemblies
+.NET Standard Facade 4.6.26011.1,System.ValueTuple.dll,
+
+# .NET Framework core libraries 4.5.4
+.NET Framework core libraries 4.5.4,System.Threading.Tasks.Extensions.dll,4.5.4 net 461
+
+# .NET Framework core libraries 4.5.0
+# Note: For these also a 4.5.1 version exists but there are indirect dependencies (amongst others from ASP.NET Core 2.1.3) on 4.5.0
+# It is not (yet?) deemed worthwhile to force usage of 4.5.1 everywhere (via explicit package references)
+.NET Framework core libraries 4.5.0,System.Numerics.Vectors.dll,Nuget package version 4.5.0 - net46
+
+# .NET Framework core libraries 4.5.1
+# The dlls below were not changed since 4.5.0, so these are same versions as were part of 4.5.0,
+.NET Framework core libraries 4.5.1,Microsoft.Win32.SystemEvents.dll,Nuget package version 4.5.0 - .NET standard - Used by UADE managed services - dependency of System.Drawing.Common 4.5.1
+.NET Framework core libraries 4.5.1,System.Collections.Immutable.dll,NuGet package version: 1.5.0 - Framework: netstandard2.0
+.NET Framework core libraries 4.5.1,System.Configuration.ConfigurationManager.dll,netcoreapp2.0
+.NET Framework core libraries 4.5.1,System.Diagnostics.PerformanceCounter.dll,Bin\runtimes\win\lib\netcoreapp2.0
+.NET Framework core libraries 4.5.1,System.Reflection.Metadata.dll,NuGet package version:1.6.0 - Framework: netstandard2.0
+.NET Framework core libraries 4.5.1,System.Security.Cryptography.ProtectedData.dll,netcoreapp2.0
+.NET Framework core libraries 4.5.1,System.Security.Permissions.dll,netcoreapp2.0
+.NET Framework core libraries 4.5.1,System.Text.Encodings.Web.dll,NuGet package version: 4.5.0 - Framework: netstandard2.0
+
+# .NET Framework core libraries 4.5.1
+# The dlls below are changed since 4.5.0 release
+.NET Framework core libraries 4.5.1,System.Drawing.Common.dll,Nuget package version 4.5.1 - NET standard - Used by UADE managed services
+.NET Framework core libraries 4.5.1,System.Memory.dll,Nuget package version 4.5.4 - net461
+
+# .NET Framework core libraries (misc versions)
+# TODO: Align with preferred version
+.NET Framework core libraries Other,System.Buffers.dll,Nuget package version 4.5.1 - net461
+.NET Framework core libraries Other,System.Diagnostics.DiagnosticSource.dll,NuGet package version: 5.0.1 - net46
+.NET Framework core libraries Other,System.Formats.Asn1.dll,netcoreapp2.0
+.NET Framework core libraries Other,System.IO.Pipelines.dll,Nuget package version 4.7.4 - netcoreapp3.0
+.NET Framework core libraries Other,System.Runtime.CompilerServices.Unsafe.dll,Nuget package version 5.0.0 - net45
+.NET Framework core libraries Other,System.Security.Cryptography.Cng.dll,runtimes\win\lib\netcoreapp3.0
+.NET Framework core libraries Other,System.Security.Cryptography.Pkcs.dll,runtimes\win\lib\netcoreapp3.0
+
+# Misc
+Custom.7-zip.Standalone,7za.exe,
