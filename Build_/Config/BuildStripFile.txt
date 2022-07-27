@@ -1,5 +1,5 @@
-from release branch: Build strij file
+from develop branch: Build strijp file
 line1
-line2( removed line 3)
+line2
+line3
 line4
-added line 5
