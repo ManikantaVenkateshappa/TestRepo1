@@ -1,5 +1,5 @@
 from develop branch: FileA
 line1
-line2-changed
-line3-changed
+line2-changed-changed2nd
+line3-changed-changed2nd
 line4
